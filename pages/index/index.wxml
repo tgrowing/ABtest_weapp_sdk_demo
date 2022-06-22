@@ -1,0 +1,82 @@
+<!--index.wxml-->
+<view class="container">
+  
+  <view class="weui-box">
+    <view class="weui-box-head">小程序SDK基本信息</view>
+    <view class="weui-form">
+      <view class="weui-form-item">
+        <text class="weui-label">Appkey</text>
+        <!-- <text class="weui-input">{{appkey}}</text> -->
+        <input class="weui-input weui-input_line" model:value="{{appkey}}" placeholder="必填" clearable/>
+      </view>
+      <view class="weui-form-item">
+        <text class="weui-label">userid</text>
+        <!-- <text class="weui-input">{{appkey}}</text> -->
+        <input class="weui-input weui-input_line" model:value="{{guid}}" placeholder="可不填"/>
+      </view>
+      <view class="weui-form-item">
+        <text class="weui-label">上报url</text>
+        <!-- <text class="weui-input">{{appkey}}</text> -->
+        <input class="weui-input weui-input_line" model:value="{{reportUrl}}" placeholder="选填（默认为SAAS地址）"/>
+      </view>
+      
+      <view class="weui-form-item">
+        <text class="weui-label">获取实验配置url</text>
+        <!-- <text class="weui-input">{{appkey}}</text> -->
+        <input class="weui-input weui-input_line" model:value="{{experimentUrl}}" placeholder="选填（默认为SAAS地址）"/>
+      </view>
+      <view class="weui-form-item">
+        <text class="weui-label">测试环境</text>
+        <!-- <text class="weui-input">{{appkey}}</text> -->
+        <switch model:checked="{{isTest}}" bindchange="switch1Change"/>
+      </view>
+      <view class="operate">
+        <button size="mini" class="weui-button" bindtap="initSDK" disabled="{{initStatus}}">初始化sdk</button>
+      </view>
+    </view>
+  </view>
+  <view class="weui-box weui-box_active">
+    <view class="weui-box-head">切换用户</view>
+    <view class="weui-form">
+      <view class="weui-form-item">
+        <text class="weui-label">用户id</text>
+        <input class="weui-input weui-input_line" model:value="{{guid}}" placeholder='用户id'/>
+      </view>
+      
+      <view class="operate">
+        <button size="mini" class="weui-button" bindtap="switchUser">提交</button>
+      </view>
+    </view>
+  </view>
+  <view class="weui-box weui-box_active">
+    <view class="weui-box-head">上报一次实验曝光</view>
+    <view class="weui-form">
+      <view class="weui-form-item">
+        <text class="weui-label">实验id</text>
+        <input class="weui-input weui-input_line" model:value="{{expId}}" placeholder='实验id'/>
+      </view>
+      
+      <view class="operate">
+        <button size="mini" class="weui-button" bindtap="reportExpData">发送上报</button>
+      </view>
+    </view>
+  </view>
+  <view class="weui-box weui-box_active">
+    <view class="weui-box-head">拉取实验并上报事件</view>
+    <view class="weui-form">
+      <view class="weui-form-item">
+        <text class="weui-label">实验id</text>
+        <input class="weui-input weui-input_line" model:value="{{expId}}" placeholder='实验id'/>
+      </view>
+      <view class="weui-form-item">
+        <text class="weui-label">事件名称</text>
+        <input class="weui-input weui-input_line" model:value="{{eventCode}}" placeholder="必填"/>
+      </view>
+      
+      <view class="operate">
+        <button size="mini" class="weui-button" bindtap="reportExpAndCodeData">发送上报</button>
+      </view>
+    </view>
+  </view>
+  
+</view>

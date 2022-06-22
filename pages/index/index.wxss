@@ -1,0 +1,46 @@
+/**index.wxss**/
+.weui-box {
+  padding: 20px;
+  background: #fff;
+  margin-bottom: 8px;
+}
+.weui-box-head {
+  margin-left: 10px;
+  font-size: 16px;
+  font-weight: bold;
+}
+.weui-form {
+  margin: 15px 20px;
+}
+.weui-form-item {
+  width: 100%;
+  display: flex;
+  margin-bottom: 20px;
+}
+.weui-label {
+  width: 80px;
+}
+.weui-input{
+  flex: 1;
+  margin: 0 20px;
+}
+.weui-input_line{
+  flex: 1;
+  margin: 0 20px;
+  border-bottom: 1px solid #000;
+}
+
+.operate {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.weui-button {
+  color: #fff;
+  background: #0e73ff;
+  margin-right: 5px;
+}
+.weui-button:active {
+  color: #fff;
+  background: #3e8fff;
+}
